@@ -9,7 +9,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Hospitals</title>
     <link rel="stylesheet" href="<c:url value="/resources/bootstrap/css/bootstrap.css"/>" >
 </head>
 <body>
@@ -59,7 +59,7 @@
 %>
     <h1 class="mt-4">Hospitals</h1>
 
-    <a href = "addHospital" class="btn btn-primary btn-sm my-3"> Add Hospital </a>
+    <a href = "add-hospital" class="btn btn-primary btn-sm my-3"> Add Hospital </a>
 
     <table border="1" class = "table table-striped table-responsive-md">
         <thead>

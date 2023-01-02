@@ -59,10 +59,10 @@
 %>
 </div>
 <div class="container mt-5 d-flex align-items-center justify-content-center">
-    <form action="add-hospital" method="post">
+    <form action="addHospital" method="post">
         <table>
             <tr>
-                <td>Name</td><td><input type="text" name="firstname"/></td>
+                <td>Name</td><td><input type="text" name="name"/></td>
             </tr>
             <tr>
                 <td>Email</td><td><input type="text" name="email"/></td>
