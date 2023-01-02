@@ -23,6 +23,7 @@ public class DoctorController {
         return "addDoctor";
     }
 
+
     @RequestMapping(value = "/add-doctor", method = RequestMethod.POST)
     public String add(@ModelAttribute("doctor") Doctor doctor) {
         if(dao.addDoctor(doctor) == true){
@@ -39,7 +40,7 @@ public class DoctorController {
     }
 
 //    Edit Doctors view page
-    @RequestMapping(value = "/edit-save-doctor/{id}")
+    @RequestMapping(value = "/edit-doctor/{id}")
     public String editPage(@PathVariable int id, Model m){
         Doctor doctor = dao.getDoctorById(id);
         m.addAttribute("command",doctor);
@@ -48,9 +49,10 @@ public class DoctorController {
 
 //    Edit a doctor
 
-    @RequestMapping(value = "/edit-save-doctor/{id}")
+    @RequestMapping(value = "/edit-save-doctor")
     public String ediSubmit(@ModelAttribute("doctor") Doctor doctor){
-        return "redirect:/doctors?success=true";
+        dao.update(doctor);
+        return "redirect:/home";
     }
 
     @RequestMapping(value = "/delete-doctor/{id}", method = RequestMethod.GET)

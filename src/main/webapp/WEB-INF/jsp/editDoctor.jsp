@@ -9,8 +9,18 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<h1>Edit Employee</h1>
-<form:form method="POST" action="/edit-save-doctor">
+<h1>Edit Doctor</h1>
+
+<% String success = request.getParameter("success");
+  if(success != null){
+    if(success.equals("true")){
+%><h3 class="text-success fw-bold"> Deleted Success </h3><%
+} else {
+%><h3 class="text-danger"> Deleted Fail </h3><%
+    }
+  }
+%>
+<form:form method="POST" action="/adminPanel/edit-save-doctor">
   <table >
     <tr>
       <td></td>
