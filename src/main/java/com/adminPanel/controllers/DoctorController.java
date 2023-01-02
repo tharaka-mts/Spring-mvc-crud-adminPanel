@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.print.Doc;
 import java.util.List;
 
 @Controller
@@ -37,9 +38,20 @@ public class DoctorController {
         return "viewDoctors";
     }
 
-//    Edit Doctors
+//    Edit Doctors view page
+    @RequestMapping(value = "/edit-save-doctor/{id}")
+    public String editPage(@PathVariable int id, Model m){
+        Doctor doctor = dao.getDoctorById(id);
+        m.addAttribute("command",doctor);
+        return "editDoctor";
+    }
 
+//    Edit a doctor
 
+    @RequestMapping(value = "/edit-save-doctor/{id}")
+    public String ediSubmit(@ModelAttribute("doctor") Doctor doctor){
+        return "redirect:/doctors?success=true";
+    }
 
     @RequestMapping(value = "/delete-doctor/{id}", method = RequestMethod.GET)
     public String delete(@PathVariable int id){
