@@ -37,6 +37,10 @@ public class DoctorController {
         return "viewDoctors";
     }
 
+//    Edit Doctors
+
+
+
     @RequestMapping(value = "/delete-doctor/{id}", method = RequestMethod.GET)
     public String delete(@PathVariable int id){
         if(dao.deleteDoctor(id) == true){

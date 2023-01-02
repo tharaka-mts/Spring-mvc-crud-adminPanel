@@ -24,10 +24,10 @@
             <div class="collapse navbar-collapse ms-3" id="navMenu">
                 <ul class="nav nav-pills nav-fill ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="home">Home</a>
+                        <a href="home" class="nav-link active" >Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" >Hospitals</a>
+                        <a href="hospitals" class="nav-link" >Hospitals</a>
                     </li>
                     <li class="nav-item">
                         <a href="doctors" class="nav-link" >Doctors</a>

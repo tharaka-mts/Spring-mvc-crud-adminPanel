@@ -1,6 +1,7 @@
 package com.adminPanel.dao;
 
 import com.adminPanel.beans.Doctor;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
@@ -23,6 +24,16 @@ public class DoctorDao {
     public boolean deleteDoctor(int id){
         String delete = "DELETE FROM doctors WHERE id="+id+"";
         return template.update(delete) > 0;
+    }
+
+    public Doctor getDoctorById(int id){
+        String sql="SELECT * FROM doctors WHERE id=?";
+        return template.queryForObject(sql, new Object[]{id},new BeanPropertyRowMapper<Doctor>(Doctor.class));
+    }
+
+    public int update(Doctor doctor){
+        String sql="UPDATE doctors SET firstname='"+doctor.getFirstname()+"', lastname='"+doctor.getLastname()+"',email='"+doctor.getEmail()+"',contact='"+doctor.getContact()+"' WHERE id="+doctor.getId()+"";
+        return template.update(sql);
     }
 
     public List<Doctor> getDoctors(){
