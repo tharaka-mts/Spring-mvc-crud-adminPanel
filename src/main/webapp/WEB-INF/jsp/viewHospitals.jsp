@@ -83,7 +83,7 @@
             <td>${hospital.email}</td>
             <td>${hospital.contact}</td>
             <td>
-                <a class="btn btn-dark">Edit</a>
+                <a href="edit-hospital/${hospital.id}" class="btn btn-dark">Edit</a>
                 <a href="delete-hospital/${hospital.id}" class="btn btn-danger">Delete</a>
             </td>
         </tr>
