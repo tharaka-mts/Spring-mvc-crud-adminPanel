@@ -12,7 +12,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Edit Hospital</title>
+  <title>Edit Doctor</title>
   <link rel="stylesheet" href="<c:url value="/resources/bootstrap/css/bootstrap.css"/>" >
 </head>
 <body>
@@ -50,14 +50,14 @@
 <% String success = request.getParameter("success");
   if(success != null){
     if(success.equals("true")){
-%><h3 class="text-success fw-bold"> Deleted Success </h3><%
+%><h3 class="text-success fw-bold"> Edited Success </h3><%
 } else {
-%><h3 class="text-danger"> Deleted Fail </h3><%
+%><h3 class="text-danger"> Edited Fail </h3><%
     }
   }
 %>
 </div>
-<div class="container">
+<div class="container align-items-center align-content-center">
 
 
 <form:form method="POST" action="/adminPanel/edit-save-doctor">
@@ -85,7 +85,7 @@
 
     <tr>
       <td> </td>
-      <td><input type="submit" value="Edit Save" /></td>
+      <td><input class="btn btn-secondary" type="submit" value="Edit Save" /></td>
     </tr>
   </table>
 </form:form>
