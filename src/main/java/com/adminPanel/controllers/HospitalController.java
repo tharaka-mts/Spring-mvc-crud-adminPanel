@@ -40,6 +40,22 @@ public class HospitalController {
         } return "redirect:/add-hospital?success=false";
     }
 
+//    Edit hospital page
+    @RequestMapping(value = "/edit-hospital/{id}")
+    public String editPage(@PathVariable int id, Model m){
+        Hospital hospital = hospitalDao.getHospitalById(id);
+        m.addAttribute("command",hospital);
+        return "editHospital";
+    }
+
+//    Edit a hospital
+
+    @RequestMapping(value = "/edit-save-hospital")
+    public String ediSubmit(@ModelAttribute("hospital") Hospital hospital){
+        hospitalDao.updateHospital(hospital);
+        return "redirect:/home";
+    }
+
 //    Delete a hospital
     @RequestMapping(value = "/delete-hospital/{id}", method = RequestMethod.GET)
     public String delete(@PathVariable int id){
