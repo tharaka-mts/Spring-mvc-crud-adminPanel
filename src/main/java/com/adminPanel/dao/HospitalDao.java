@@ -1,5 +1,7 @@
 package com.adminPanel.dao;
+import com.adminPanel.beans.Doctor;
 import com.adminPanel.beans.Hospital;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
@@ -18,6 +20,17 @@ public class HospitalDao {
         String add = "INSERT INTO hospitals(name, email, contact) VALUES('"+ hospital.getName()+"','"+ hospital.getEmail()+"','"+ hospital.getContact()+"')";
         return template.update(add) > 0;
     }
+
+    public Hospital getHospitalById(int id){
+        String sql="SELECT * FROM hospitals WHERE id=?";
+        return template.queryForObject(sql, new Object[]{id},new BeanPropertyRowMapper<Hospital>(Hospital.class));
+    }
+
+    public int updateHospital(Hospital hospital){
+        String sql="UPDATE hospitals SET name='"+hospital.getName()+"',email='"+hospital.getEmail()+"',contact='"+hospital.getContact()+"' WHERE id="+hospital.getId()+"";
+        return template.update(sql);
+    }
+
 
     public boolean deleteHospital(int id){
         String delete = "DELETE FROM hospitals WHERE id="+id+"";

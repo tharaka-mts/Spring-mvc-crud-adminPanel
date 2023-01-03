@@ -9,7 +9,43 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<h1>Edit Doctor</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Hospital</title>
+  <link rel="stylesheet" href="<c:url value="/resources/bootstrap/css/bootstrap.css"/>" >
+</head>
+<body>
+
+<div>
+  <nav class="navbar navbar-expand-lg shadow">
+    <div class="container mt-2 mb-2">
+      <a class="navbar-brand" href="home">AdminPanel</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse ms-3" id="navMenu">
+        <ul class="nav nav-pills nav-fill ms-auto">
+          <li class="nav-item">
+            <a href="home" class="nav-link" >Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="hospitals" class="nav-link" >Hospitals</a>
+          </li>
+          <li class="nav-item">
+            <a href="doctors" class="nav-link" >Doctors</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" >Pet Owners</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<div>
 
 <% String success = request.getParameter("success");
   if(success != null){
@@ -20,6 +56,10 @@
     }
   }
 %>
+</div>
+<div class="container">
+
+
 <form:form method="POST" action="/adminPanel/edit-save-doctor">
   <table >
     <tr>
@@ -49,3 +89,7 @@
     </tr>
   </table>
 </form:form>
+
+</div>
+</body>
+</html>
