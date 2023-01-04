@@ -22,7 +22,7 @@ public class petOwnerDao {
         return template.update(add) > 0;
     }
 
-    public boolean deleteOwner(petOwner owner){
+    public boolean deleteOwner(int id){
         String delete = "DELETE FROM petowners WHERE id="+id+"";
         return template.update(delete) > 0;
     }
@@ -38,16 +38,16 @@ public class petOwnerDao {
     }
 
     public List<petOwner> getOwner(){
-        return template.query("SELECT * FROM petowners", new RowMapper<petOwner>(){
-           public petOwner mapRow(ResultSet rs, int row) throws SQLException {
-               petOwner owner = new petOwner();
-               owner.setId(rs.getInt(1));
-               owner.setFirstname(rs.getString(2));
-               owner.setLastname(rs.getString(3));
-               owner.setEmail(rs.getString(4));
-               owner.setContact(rs.getString(5));
-               return owner;
-           }
+        return template.query("SELECT * FROM petowners",new RowMapper<petOwner>(){
+            public petOwner mapRow(ResultSet rs, int row) throws SQLException {
+                petOwner owner = new petOwner();
+                owner.setId(rs.getInt(1));
+                owner.setFirstname(rs.getString(2));
+                owner.setLastname(rs.getString(3));
+                owner.setEmail(rs.getString(4));
+                owner.setContact(rs.getString(5));
+                return owner;
+            }
         });
     }
 }
