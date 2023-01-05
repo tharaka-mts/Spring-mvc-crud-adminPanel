@@ -42,4 +42,8 @@
         <property name="template" ref="jt" />
     </bean>
 
+    <bean id="petownerdao" class="com.adminPanel.dao.petOwnerDao">
+        <property name="template" ref="jt" />
+    </bean>
+
 </beans>
