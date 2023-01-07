@@ -35,7 +35,7 @@
                         <a href="doctors" class="nav-link active" >Doctors</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" >Pet Owners</a>
+                        <a href="petowners" class="nav-link" >Pet Owners</a>
                     </li>
 
                 </ul>
