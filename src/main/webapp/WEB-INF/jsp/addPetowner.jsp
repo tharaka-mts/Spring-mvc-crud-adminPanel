@@ -35,7 +35,6 @@
                     <li class="nav-item">
                         <a href="petowners" class="nav-link" >Pet Owners</a>
                     </li>
-
                 </ul>
             </div>
         </div>
@@ -58,28 +57,29 @@
     }
 %>
 </div>
-<div class="container mt-5 d-flex align-items-center justify-content-center">
+
+<div class="container mt-5 align-items-center w-50">
+    <h1>Add PetOwner</h1>
     <form action="add-owner" method="post">
-        <table>
-            <tr>
-                <td>First Name</td><td><input type="text" name="firstname"/></td>
-            </tr>
-            <tr>
-                <td>Last Name</td><td><input type="text" name="lastname"/></td>
-            </tr>
-            <tr>
-                <td>Email</td><td><input type="text" name="email"/></td>
-            </tr>
-            <tr>
-                <td>Contact</td><td><input type="text" name="contact"/></td>
-            </tr>
-            <tr>
-                <td></td><td><input type="submit" value="Register" class="btn btn-warning"/></td>
-            </tr>
-        </table>
+        <div class="form-group mt-3">
+            <label for="firstname">First Name</label>
+            <input name="firstname" type="text" class="form-control" id="firstname" aria-describedby="emailHelp" placeholder="Enter Firstname" required>
+        </div>
+        <div class="form-group mt-3">
+            <label for="lastname">Last Name</label>
+            <input name="lastname" type="text" class="form-control" id="lastname" aria-describedby="emailHelp" placeholder="Enter Lastname" required>
+        </div>
+        <div class="form-group mt-3">
+            <label for="Email">Email address</label>
+            <input name="email" type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Email" required>
+        </div>
+        <div class="form-group mt-3">
+            <label for="contact">Contact</label>
+            <input name="contact" type="text" class="form-control" id="contact" aria-describedby="emailHelp" placeholder="Contact" required>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
     </form>
 </div>
-
 
 </body>
 </html>

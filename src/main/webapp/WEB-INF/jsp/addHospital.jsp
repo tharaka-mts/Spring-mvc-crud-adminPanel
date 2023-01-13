@@ -33,7 +33,7 @@
                         <a href="doctors" class="nav-link" >Doctors</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" >Pet Owners</a>
+                        <a href="petowners" class="nav-link" >Pet Owners</a>
                     </li>
 
                 </ul>
@@ -58,22 +58,24 @@
     }
 %>
 </div>
-<div class="container mt-5 d-flex align-items-center justify-content-center">
+
+
+<div class="container mt-5 align-items-center w-50">
+    <h1>Add Hospital</h1>
     <form action="addHospital" method="post">
-        <table>
-            <tr>
-                <td>Name</td><td><input type="text" name="name"/></td>
-            </tr>
-            <tr>
-                <td>Email</td><td><input type="text" name="email"/></td>
-            </tr>
-            <tr>
-                <td>Contact</td><td><input type="text" name="contact"/></td>
-            </tr>
-            <tr>
-                <td></td><td><input type="submit" value="Register" class="btn btn-warning"/></td>
-            </tr>
-        </table>
+        <div class="form-group mt-3">
+            <label for="name">Name</label>
+            <input name="name" type="text" class="form-control" id="name"  placeholder="Enter Name" required>
+        </div>
+        <div class="form-group mt-3">
+            <label for="Email">Email address</label>
+            <input name="email" type="email" class="form-control" id="Email" placeholder="Email" required>
+        </div>
+        <div class="form-group mt-3">
+            <label for="contact">Contact</label>
+            <input name="contact" type="text" class="form-control" id="contact" placeholder="Contact" required>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
     </form>
 </div>
 

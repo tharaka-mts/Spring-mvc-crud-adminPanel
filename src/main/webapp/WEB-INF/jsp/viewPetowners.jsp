@@ -57,7 +57,7 @@
         }
     }
 %>
-    <h1 class="mt-4">Doctors</h1>
+    <h1 class="mt-4">Pet Owners</h1>
 
     <a href = "addOwner" class="btn btn-primary btn-sm my-3"> Add Pet Owner </a>
 
