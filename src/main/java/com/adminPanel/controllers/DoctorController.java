@@ -14,10 +14,7 @@ import java.util.List;
 public class DoctorController {
     @Autowired
     DoctorDao dao;
-    @RequestMapping("/home")
-    public String home(){
-        return "home";
-    }
+
     @RequestMapping("addDoctor")
     public String addDocPage(){
         return "addDoctor";
