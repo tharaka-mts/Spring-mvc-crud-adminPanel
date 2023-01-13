@@ -17,6 +17,12 @@ public class petOwnerDao {
         this.template = template;
     }
 
+    public int count(){
+        String countSql = "SELECT COUNT(*) FROM petowners";
+        return template.queryForObject(countSql, Integer.class);
+    }
+
+
     public boolean addOwner(petOwner owner){
         String add = "INSERT INTO petowners(firstname, lastname, email, contact) VALUES('"+ owner.getFirstname()+"','"+ owner.getLastname()+"','"+ owner.getEmail()+"','"+ owner.getContact()+"')";
         return template.update(add) > 0;
