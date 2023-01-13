@@ -42,7 +42,16 @@
     </nav>
 </div>
 
-<h1>Home page need to implement</h1>
+<div class="container mt-5 w-50">
+    <div class="card">
+        <h5 class="card-header">Hospitals</h5>
+        <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="hospitals" class="btn btn-primary">View Hospitals</a>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
