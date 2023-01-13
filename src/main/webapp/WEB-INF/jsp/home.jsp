@@ -42,13 +42,65 @@
     </nav>
 </div>
 
+<%--Hospital details--%>
 <div class="container mt-5 w-50">
-    <div class="card">
-        <h5 class="card-header">Hospitals</h5>
-        <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="hospitals" class="btn btn-primary">View Hospitals</a>
+    <div class="card flex-row">
+        <div class="col-md-6">
+            <h5 class="card-header">Hospitals</h5>
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="hospitals" class="btn btn-primary">View Hospitals</a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h5 class="card-header">.</h5>
+            <div class="card-body">
+                <h5 class="card-title">Hospital Count</h5>
+                <h3>${hospitalCount}</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%--Doctor Details--%>
+<div class="container mt-5 w-50">
+    <div class="card flex-row">
+        <div class="col-md-6">
+            <h5 class="card-header">Doctors</h5>
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="doctors" class="btn btn-primary">View Doctors</a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h5 class="card-header">.</h5>
+            <div class="card-body">
+                <h5 class="card-title">Doctor Count</h5>
+                <h3>${doctorCount}</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%--Pet Owner Details--%>
+<div class="container mt-5 w-50">
+    <div class="card flex-row">
+        <div class="col-md-6">
+            <h5 class="card-header">Pet Owners</h5>
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="petowners" class="btn btn-primary">View PetOwners</a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h5 class="card-header">.</h5>
+            <div class="card-body">
+                <h5 class="card-title">Pet Owner Count</h5>
+                <h3>${petOwnerCount}</h3>
+            </div>
         </div>
     </div>
 </div>
