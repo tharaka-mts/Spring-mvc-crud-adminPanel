@@ -16,6 +16,11 @@ public class HospitalDao {
         this.template = template;
     }
 
+    public int count(){
+        String countSql = "SELECT COUNT(*) FROM hospitals";
+        return template.queryForObject(countSql, Integer.class);
+    }
+
     public boolean addHospital(Hospital hospital){
         String add = "INSERT INTO hospitals(name, email, contact) VALUES('"+ hospital.getName()+"','"+ hospital.getEmail()+"','"+ hospital.getContact()+"')";
         return template.update(add) > 0;
